@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './styles/GlobalStyles';
+import { theme } from './styles/theme';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Hero } from './components/Hero';
+import { Stats } from './components/Stats';
+import { FeaturedCourses } from './components/FeaturedCourses';
+import { CoursesPage } from './pages/CoursesPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { NotFoundPage } from './pages/NotFoundPage';
+import { Testimonials } from './components/testimonial';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router>
+        <Header />
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <>
+                <Hero />
+                <FeaturedCourses />
+                <Stats />
+                <Testimonials />
+              </>
+            } 
+          />
+          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 
