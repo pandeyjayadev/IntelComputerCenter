@@ -13,7 +13,8 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { Testimonials } from './components/testimonial';
-
+import { FAQPage } from './pages/FaqPage';
+import { EnrollPage } from './pages/EnroolPage';
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -36,6 +37,9 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/enroll" element={<EnrollPage />} />
+
         </Routes>
         <Footer />
       </Router>

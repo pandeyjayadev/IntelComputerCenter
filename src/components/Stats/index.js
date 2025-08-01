@@ -21,7 +21,7 @@ const StatItem = styled.div`
 `;
 
 const StatNumber = styled.div`
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: ${({ theme }) => theme.spacing.sm};
 `;

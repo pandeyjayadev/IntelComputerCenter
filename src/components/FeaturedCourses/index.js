@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import { Container } from '../Container';
 import { FiClock, FiCalendar, FiDollarSign } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import { Button } from '../Button';
+
+// Import your course images (make sure to add these images to your project)
+
 
 const FeaturedWrapper = styled.section`
   padding: 4rem 0;
@@ -21,18 +25,6 @@ const SectionTitle = styled.h2`
   color: ${({ theme }) => theme.colors.dark};
 `;
 
-const ViewMoreLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.primary};
-  text-decoration: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 const CoursesGrid = styled.div`
   display: grid;
@@ -56,11 +48,30 @@ const CourseCard = styled.div`
 const CourseImage = styled.div`
   height: 180px;
   background-color: ${({ theme }) => theme.colors.primary}20;
+  background-image: url(${props => props.image});
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.primary};
+  color: white;
   font-size: 3rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const CourseContent = styled.div`
@@ -104,7 +115,8 @@ const featuredCourses = [
     duration: "2 Months",
     schedule: "Morning/Evening",
     price: "NPR 5,000",
-    icon: "💻"
+    icon: "💻",
+    // image: computerCourseImg
   },
   {
     id: 2,
@@ -113,7 +125,8 @@ const featuredCourses = [
     duration: "2 Months",
     schedule: "Flexible",
     price: "NPR 7,000",
-  
+    icon: "🎨",
+    // image: graphicsDesignImg
   },
   {
     id: 3,
@@ -122,7 +135,8 @@ const featuredCourses = [
     duration: "2 Months",
     schedule: "Weekends",
     price: "NPR 8,000",
-  
+    icon: "📊",
+    // image: tallyAccountingImg
   }
 ];
 
@@ -132,16 +146,14 @@ export const FeaturedCourses = () => {
       <Container>
         <SectionHeader>
           <SectionTitle>Featured Courses</SectionTitle>
-          <ViewMoreLink to="/courses">
-            View All Courses <span>→</span>
-          </ViewMoreLink>
+          <Button primary as="a" href='/courses'>All Courses</Button>
         </SectionHeader>
         
         <CoursesGrid>
           {featuredCourses.map(course => (
             <CourseCard key={course.id}>
-              <CourseImage>
-                <span style={{ fontSize: '4rem' }}>{course.icon}</span>
+              <CourseImage image={course.image}>
+                <span>{course.icon}</span>
               </CourseImage>
               <CourseContent>
                 <CourseTitle>{course.title}</CourseTitle>
@@ -156,7 +168,6 @@ export const FeaturedCourses = () => {
                     {course.schedule}
                   </MetaItem>
                   <MetaItem>
-                    <FiDollarSign size={16} />
                     {course.price}
                   </MetaItem>
                 </CourseMeta>

@@ -48,7 +48,7 @@ const DrawerContainer = styled.div`
 `;
 
 const DrawerHeader = styled.div`
-  padding: 1.5rem;
+  padding: 1.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,9 +106,9 @@ const NavLink = styled(Link)`
   }
   
   svg {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.colors.primary};
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -181,8 +181,12 @@ export const Drawer = ({ isOpen, onClose }) => {
         </DrawerContent>
 
         <DrawerFooter>
-          © {new Date().getFullYear()} Intel Computer Institute
+           <p>Developed By : <a href='www.pandeyj.com.np '>Jayadev Pandey</a></p>
         </DrawerFooter>
+
+        {/* <DrawerFooter>
+          © {new Date().getFullYear()} Intel Computer Institute
+        </DrawerFooter> */}
       </DrawerContainer>
     </>
   );

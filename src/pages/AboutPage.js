@@ -429,11 +429,11 @@ export const AboutPage = () => {
 
         <StatsSection>
           <StatCard delay="0.2s">
-            <StatNumber>1,500+</StatNumber>
+            <StatNumber>3,000+</StatNumber>
             <StatLabel>Students Trained</StatLabel>
           </StatCard>
           <StatCard delay="0.4s">
-            <StatNumber>12+</StatNumber>
+            <StatNumber>7+</StatNumber>
             <StatLabel>Years Experience</StatLabel>
           </StatCard>
           <StatCard delay="0.6s">
@@ -441,7 +441,7 @@ export const AboutPage = () => {
             <StatLabel>Satisfaction Rate</StatLabel>
           </StatCard>
           <StatCard delay="0.8s">
-            <StatNumber>50+</StatNumber>
+            <StatNumber>10+</StatNumber>
             <StatLabel>Courses Offered</StatLabel>
           </StatCard>
         </StatsSection>

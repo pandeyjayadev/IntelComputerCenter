@@ -75,7 +75,7 @@ const Subtitle = styled.p`
   line-height: 1.6;
   margin-bottom: 2rem;
   opacity: 0.9;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 `;
 
 const CTAWrapper = styled.div`
@@ -121,17 +121,23 @@ export const Hero = () => {
         <HeroContent>
           <Title>Transform Your Digital Future</Title>
           <Subtitle>
-            Join Nepal's premier computer institute with industry-leading courses, 
+            Join Nepal's premier computer institute with industry-leading courses,
             expert instructors, and job placement support to launch your tech career.
           </Subtitle>
           <CTAWrapper>
-            <Button primary>Explore Courses</Button>
-            <Button outline>Contact Us</Button>
+            <Button primary as="a" href="/courses">
+              Explore Courses
+            </Button>
+            <Button primary as="a" href="/contact">
+              Contact Us
+            </Button>
           </CTAWrapper>
         </HeroContent>
       </Container>
       <ScrollIndicator>
-        <ScrollArrow />
+        <a href="#about" style={{ textDecoration: 'none' }}>
+          <ScrollArrow />
+        </a>
       </ScrollIndicator>
     </HeroWrapper>
   );

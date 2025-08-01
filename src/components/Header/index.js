@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink as RouterNavLink } from 'react-router-dom'; // Changed import
 import { FaBars } from 'react-icons/fa';
-import { Drawer } from './drawer'; 
+import { Drawer } from './drawer';
+
 const HeaderWrapper = styled.header`
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: white;
@@ -22,7 +23,7 @@ const HeaderContent = styled.div`
   margin: 0 auto;
 `;
 
-const Logo = styled(Link)`
+const Logo = styled(RouterNavLink)`
   font-size: 1.8rem;
   font-weight: 700;
   color: white;
@@ -52,7 +53,7 @@ const DesktopNav = styled.nav`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(RouterNavLink)`
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
@@ -91,7 +92,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-const CTAButton = styled(Link)`
+const CTAButton = styled(RouterNavLink)`
   background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   color: white;
   padding: 0.6rem 1.5rem;
@@ -147,7 +148,7 @@ export const Header = () => {
           </Logo>
 
           <DesktopNav>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" end>Home</NavLink>
             <NavLink to="/courses">Courses</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>
