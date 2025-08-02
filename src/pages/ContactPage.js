@@ -276,7 +276,7 @@ export const ContactPage = () => {
                 <InfoTitle>Our Location</InfoTitle>
               </InfoHeader>
               <InfoText>
-                Gulariya-07, Main Road<br />
+                Gulariya-07,DDC road<br />
                 Bardiya, Nepal
               </InfoText>
             </InfoCard>
@@ -289,7 +289,7 @@ export const ContactPage = () => {
                 <InfoTitle>Contact Us</InfoTitle>
               </InfoHeader>
               <InfoText>
-                Phone: +977 9848489582<br />
+                Phone: +977 9848489582 / 9812494560 <br />
                 Email: intel2070@gmail.com
               </InfoText>
             </InfoCard>
@@ -302,8 +302,7 @@ export const ContactPage = () => {
                 <InfoTitle>Opening Hours</InfoTitle>
               </InfoHeader>
               <InfoText>
-                Sunday - Friday: 7AM - 7PM<br />
-                Saturday: 9AM - 5PM
+                Sunday - Friday: 9AM - 5PM<br />
               </InfoText>
             </InfoCard>
           </ContactInfo>
@@ -362,11 +361,7 @@ export const ContactPage = () => {
             title="Institute Location"
             width="100%" 
             height="100%" 
-            frameBorder="0" 
-            scrolling="no" 
-            marginHeight="0" 
-            marginWidth="0" 
-            src="https://maps.google.com/maps?q=gulariya,bardiya&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12917.499769517985!2d81.329623581267!3d28.20808354483146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39988f006b1a1371%3A0x78d57bbf33ce01b0!2sIntel%20Computer%20Center!5e1!3m2!1sen!2snp!4v1754121802646!5m2!1sen!2snp"
             style={{ border: 'none' }}
           ></iframe>
         </MapContainer>

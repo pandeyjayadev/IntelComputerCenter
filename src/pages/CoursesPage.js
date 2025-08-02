@@ -136,19 +136,19 @@ const coursesData = [
   {
     id: 1,
     title: "Basic Computer Course",
-    description: "MS Word, MS Excel, MS PowerPoint, File management, Typing (Nepali & English), Internet, Email, Printing, Scanning.",
-    duration: "2 Months",
+    description: "Fundamentals of comptuter, Multimedia, Disk Managment, MS Word, MS Excel, MS PowerPoint, File management, Typing (Nepali & English), Internet, Email, Printing, Scanning.",
+    duration: "3 Months",
     schedule: "Morning/Evening",
-    price: "NPR 5,000",
+    price: "NPR 3,500",
     icon: "💻"
   },
   {
     id: 2,
-    title: "Computer Hardware & Maintenance",
+    title: "Computer Repairing ",
     description: "Introduction to computer parts, assembling/disassembling, formatting, installing Windows, basic troubleshooting.",
     duration: "1.5 Months",
     schedule: "Weekends",
-    price: "NPR 6,500",
+    price: "NPR 2,500",
     icon: "🔧"
   },
   {
@@ -157,7 +157,7 @@ const coursesData = [
     description: "Adobe Photoshop (basic), Canva, Photo editing, ID/Passport photo making.",
     duration: "2 Months",
     schedule: "Flexible",
-    price: "NPR 7,000",
+    price: "NPR 6,000",
     icon: "🎨"
   },
   {
@@ -166,7 +166,7 @@ const coursesData = [
     description: "Nepali Typing (Preeti, Unicode), English Typing, Speed & accuracy improvement.",
     duration: "1 Month",
     schedule: "Morning/Evening",
-    price: "NPR 3,500",
+    price: "NPR 2,000",
     icon: "⌨️"
   },
   {
@@ -175,53 +175,27 @@ const coursesData = [
     description: "Using browsers, emails, Google tools (Drive, Docs), online forms, social media basics, safety & privacy.",
     duration: "1 Month",
     schedule: "Flexible",
+    price: "NPR 1,500",
+    icon: "🌐"
+  },
+    {
+    id: 6,
+    title: "Office Package Course",
+    description: "Ms Word, Ms Excel, Ms Powerpoint, Ms onenote & more",
+    duration: "2 Month",
+    schedule: "Flexible",
     price: "NPR 4,000",
     icon: "🌐"
   },
-  {
-    id: 6,
-    title: "Office Package Course",
-    description: "Focused on MS Word, Excel, PowerPoint, and practical office file handling.",
-    duration: "1.5 Months",
-    schedule: "Morning/Evening",
-    price: "NPR 5,500",
-    icon: "📊"
-  },
-  {
+
+    {
     id: 7,
-    title: "SEE & +2 Student Computer Package",
-    description: "Tailored for school students: Basic computer + internet + typing + project preparation + printing.",
-    duration: "2 Months",
-    schedule: "After School",
-    price: "NPR 6,000",
-    icon: "🎓"
-  },
-  {
-    id: 8,
-    title: "Tally / Accounting Software",
-    description: "Introduction to digital accounting, company creation, ledgers, journal entries.",
-    duration: "2 Months",
-    schedule: "Weekends",
-    price: "NPR 8,000",
-    icon: "💰"
-  },
-  {
-    id: 9,
-    title: "Basic HTML & Website Overview",
-    description: "Introduction to web browsers, basic HTML tags, structure of web pages.",
-    duration: "1 Month",
-    schedule: "Evening",
-    price: "NPR 4,500",
-    icon: "🖥️"
-  },
-  {
-    id: 10,
-    title: "Mobile & Smartphone Training",
-    description: "For beginners: Using Android smartphones, installing apps, using digital wallets (Khalti, eSewa), QR code, camera, Wi-Fi, etc.",
-    duration: "2 Weeks",
-    schedule: "Flexible",
+    title: "SEE & +2 student computer package",
+    description: "Tailored for school students: Basic computer, Internet, Typing , project prepration, printing",
+    duration: "3 Month",
+    schedule: "After school",
     price: "NPR 3,000",
-    icon: "📱"
+    icon: "🌐"
   }
 ];
 

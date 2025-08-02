@@ -108,36 +108,33 @@ const MetaItem = styled.div`
 `;
 
 const featuredCourses = [
-  {
+    {
     id: 1,
     title: "Basic Computer Course",
-    description: "MS Word, MS Excel, MS PowerPoint, File management, Typing (Nepali & English), Internet, Email, Printing, Scanning.",
-    duration: "2 Months",
+    description: "Fundamentals of comptuter, Multimedia, Disk Managment, MS Word, MS Excel, MS PowerPoint, File management, Typing (Nepali & English), Internet, Email, Printing, Scanning.",
+    duration: "3 Months",
     schedule: "Morning/Evening",
-    price: "NPR 5,000",
-    icon: "💻",
-    // image: computerCourseImg
+    price: "NPR 3,500",
+    icon: "💻"
   },
   {
     id: 2,
+    title: "Computer Repairing ",
+    description: "Introduction to computer parts, assembling/disassembling, formatting, installing Windows, basic troubleshooting.",
+    duration: "1.5 Months",
+    schedule: "Weekends",
+    price: "NPR 2,500",
+    icon: "🔧"
+  },
+  {
+    id: 3,
     title: "Graphics Design (Basic)",
     description: "Adobe Photoshop (basic), Canva, Photo editing, ID/Passport photo making.",
     duration: "2 Months",
     schedule: "Flexible",
-    price: "NPR 7,000",
-    icon: "🎨",
-    // image: graphicsDesignImg
+    price: "NPR 6,000",
+    icon: "🎨"
   },
-  {
-    id: 3,
-    title: "Tally / Accounting Software",
-    description: "Introduction to digital accounting, company creation, ledgers, journal entries.",
-    duration: "2 Months",
-    schedule: "Weekends",
-    price: "NPR 8,000",
-    icon: "📊",
-    // image: tallyAccountingImg
-  }
 ];
 
 export const FeaturedCourses = () => {

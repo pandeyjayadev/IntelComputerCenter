@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Container } from '../Container';
 
@@ -81,6 +81,17 @@ const TestimonialText = styled.p`
   }
 `;
 
+const StarsContainer = styled.div`
+  display: flex;
+  margin-bottom: 1rem;
+`;
+
+const Star = styled.span`
+  color: ${({ $filled }) => ($filled ? '#FFD700' : '#E5E7EB')};
+  font-size: 1.2rem;
+  margin-right: 0.2rem;
+`;
+
 const AuthorInfo = styled.div`
   display: flex;
   align-items: center;
@@ -141,37 +152,62 @@ const Dot = styled.button`
 const testimonials = [
   {
     id: 1,
-    quote: "The courses here completely transformed my career. The practical approach helped me gain real-world skills.",
-    name: "Ram Bahadur Hamal",
-    role: "UI/UX Designer",
-    image: "https://randomuser.me/api/portraits/women/65.jpg"
+    quote: "I loved the way teacher taught us very nicely, the knowledge which I got from here can be implemented in real world",
+    name: "Bibek Kshetri",
+    role: "Web Development Course",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    rating: 4
   },
   {
     id: 2,
-    quote: "I was able to switch careers thanks to the comprehensive training. The instructors are industry professionals.",
-    name: "Yashoda Chaulagain",
+    quote: "I am fascinate with the teaching method of this center. I have learn a lot about basic computer courses which will be very beneficial for my future study.",
+    name: "Hemant Oli",
     role: "Basic Computer Skills Training",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    rating: 5
   },
   {
     id: 3,
-    quote: "Best decision I made for my professional development. The hands-on projects gave me the confidence to start my business.",
+    quote: "Best decision I made for my personal development. The hands-on projects gave me the confidence to use computer smoothly.",
     name: "Kabita Dhungena",
-    role: "Digital Marketing Consultant",
-    image: "https://randomuser.me/api/portraits/women/33.jpg"
+    role: "Basic computer skills Training",
+    image: "https://randomuser.me/api/portraits/women/33.jpg",
+    rating: 4
   },
   {
     id: 4,
-    quote: "The quality of education exceeded my expectations. I went from beginner to job-ready in just six months.",
+    quote: "The quality of education exceeded my expectations. I went from beginner to job-ready in just 1.5 months.",
     name: "Sanjay Thapa",
-    role: "Data Analyst",
-    image: "https://randomuser.me/api/portraits/men/22.jpg"
+    role: "Computer Repairing course",
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+    rating: 5
+  },
+   {
+    id: 5,
+    quote: "Fees are affordable, all the computers and equipment are in good conditions. Best place in city to get knowledge about Computers.",
+    name: "Laxman Shrestha",
+    role: "Computer Repairing course",
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+    rating: 4
   }
 ];
+
+const StarRating = ({ rating }) => {
+  return (
+    <StarsContainer>
+      {[1, 2, 3, 4, 5].map((star) => (
+        <Star key={star} $filled={star <= rating}>
+          {star <= rating ? '★' : '☆'}
+        </Star>
+      ))}
+    </StarsContainer>
+  );
+};
 
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const touchStart = useRef(null);
 
   // Check if mobile on mount and resize
   useEffect(() => {
@@ -215,6 +251,7 @@ export const Testimonials = () => {
         <TestimonialsGrid>
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id}>
+              <StarRating rating={testimonial.rating} />
               <TestimonialText>{testimonial.quote}</TestimonialText>
               <AuthorInfo>
                 <AuthorImage>
@@ -252,6 +289,7 @@ export const Testimonials = () => {
           >
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.id}>
+                <StarRating rating={testimonial.rating} />
                 <TestimonialText>{testimonial.quote}</TestimonialText>
                 <AuthorInfo>
                   <AuthorImage>
@@ -287,6 +325,3 @@ export const Testimonials = () => {
     </TestimonialsWrapper>
   );
 };
-
-// Touch handling reference
-const touchStart = React.createRef();

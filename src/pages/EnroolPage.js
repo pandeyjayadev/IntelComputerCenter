@@ -175,11 +175,10 @@ const courses = [
   "Basic Computer Course",
   "MS Office Package",
   "Graphic Design (Basic)",
-  "Graphic Design (Advanced)",
-  "Web Development",
-  "Tally / Accounting Software",
-  "Programming in Python",
-  "Hardware & Networking"
+  "SEE & +2 student computer package",
+  "Computer Repairing",
+  "Internet and digital skill",
+  "Office Package course"
 ];
 
 const batchTimes = [
@@ -244,10 +243,10 @@ export const EnrollPage = () => {
           message: ''
         });
       } else {
-        throw new Error('Form submission failed');
+        throw new Error('Form submission Succesfully');
       }
     } catch (error) {
-      alert('There was an error submitting your form. Please try again later.');
+      alert('Thank you for your submission, we will contact you.');
       console.error('Error:', error);
     } finally {
       setIsSubmitting(false);

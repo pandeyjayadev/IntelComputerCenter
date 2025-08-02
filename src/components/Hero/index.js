@@ -119,10 +119,9 @@ export const Hero = () => {
       <BackgroundImage />
       <Container>
         <HeroContent>
-          <Title>Transform Your Digital Future</Title>
+          <Title>Practical Computer Education for Everyone</Title>
           <Subtitle>
-            Join Nepal's premier computer institute with industry-leading courses,
-            expert instructors, and job placement support to launch your tech career.
+            Join our local computer institute and gain the skills you need for work, study, and daily life.
           </Subtitle>
           <CTAWrapper>
             <Button primary as="a" href="/courses">

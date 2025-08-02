@@ -15,6 +15,8 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { Testimonials } from './components/testimonial';
 import { FAQPage } from './pages/FaqPage';
 import { EnrollPage } from './pages/EnroolPage';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
+
 function App() {
   return (
     <ThemeProvider theme={theme}>

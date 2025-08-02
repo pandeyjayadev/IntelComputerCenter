@@ -182,15 +182,15 @@ export const Footer = () => {
           <FooterHeading>Contact Info</FooterHeading>
           <ContactInfo>
             <FaMapMarkerAlt />
-            <span>Gulariya-07, Bardiya, Nepal</span>
+            <span>DDC Road, Gulariya-07, Bardiya, Nepal</span>
           </ContactInfo>
           <ContactInfo>
             <FaPhone />
-            <span>+977 1234567890</span>
+            <span>+977 9848489582 / 9812494560</span>
           </ContactInfo>
           <ContactInfo>
             <FaEnvelope />
-            <span>info@intelcomputer.edu.np</span>
+            <span>intel2070@gmail.com</span>
           </ContactInfo>
         </FooterSection>
 
@@ -214,7 +214,7 @@ export const Footer = () => {
       </FooterContent>
 
       <Copyright>
-        <p>© {new Date().getFullYear()} Intel Computer Institute. All Rights Reserved.</p>
+        <p>© 2024 Intel Computer Institute. All Rights Reserved.</p>
         <p>
           Developed by <DeveloperCredit href="https://pandeyj.com.np" target="_blank" rel="noopener noreferrer">Jayadev Pandey</DeveloperCredit>
         </p>

@@ -59,10 +59,9 @@ const Counter = ({ target, duration = 2000 }) => {
 };
 
 const statsData = [
-  { number: 3000, label: 'Certified Students' },
-  { number: 15, label: 'Courses Available' },
+  { number: 1800, label: 'Certified Students' },
+  { number: 7, label: 'Courses Available' },
   { number: 5, label: 'Qualified Instructors' },
-  { number: 3, label: 'Placement Partners' },
 ];
 
 export const Stats = () => {
