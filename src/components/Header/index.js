@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { NavLink as RouterNavLink, useLocation } from 'react-router-dom';
 import { FaBars, FaStar, FaGraduationCap, FaRocket } from 'react-icons/fa';
 import { Drawer } from './drawer';
+import logo from '../assets/logo.png';
 
 const shimmer = keyframes`
   0% { background-position: -200% 0; }
@@ -151,13 +152,15 @@ const Logo = styled(RouterNavLink)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: ${props => props.showLogo ? 1 : 0};
-  transform: ${props => props.showLogo ? 'translateX(0) scale(1)' : 'translateX(-15px) scale(0.95)'};
+  opacity: 1;
+  transform: translateX(0) scale(1);
   position: relative;
   
   &:hover {
-    transform: ${props => props.showLogo ? 'translateY(-2px) scale(1.02)' : 'translateX(-15px) scale(0.95)'};
+    transform: translateY(-2px) scale(1.02);
     filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
   }
   
@@ -177,7 +180,7 @@ const Logo = styled(RouterNavLink)`
   }
   
   span {
-    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #ffc60bff 50%, #1ecf15ff 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -199,6 +202,26 @@ const Logo = styled(RouterNavLink)`
   
   &:hover span::after {
     transform: scaleX(1);
+  }
+  
+  .logo-img {
+    height: 2.5rem;
+    width: auto;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    
+    @media (max-width: 768px) {
+      height: 2rem;
+    }
+    
+    @media (max-width: 480px) {
+      height: 1.8rem;
+    }
+  }
+  
+  &:hover .logo-img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.4));
   }
 `;
 
@@ -394,7 +417,6 @@ export const Header = () => {
   
   const isHomePage = location.pathname === '/';
   const topBarHeight = isHomePage && isTopBarVisible && window.innerWidth >= 768 ? 46 : 0;
-  const showLogo = isHomePage && window.innerWidth >= 768 ? !isTopBarVisible : true;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -456,8 +478,9 @@ export const Header = () => {
       
       <HeaderWrapper topBarHeight={topBarHeight}>
         <HeaderContent>
-          <Logo to="/" showLogo={showLogo}>
-            Intel<span>Computer</span>
+          <Logo to="/">
+            <span>IntelComputer</span>
+            <img src={logo} alt="Intel Computer Logo" className="logo-img" />
           </Logo>
           
           <DesktopNav>

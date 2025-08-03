@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Container } from '../components/Container';
-import { FiSearch, FiClock, FiCalendar, FiDollarSign, FiArrowRight, FiStar } from 'react-icons/fi';
+import { FiSearch, FiClock, FiCalendar, FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+
+// Import local images for course backgrounds
+import BasicComputerBg from '../components/assets/course/repair.jpg';
+import RepairingBg from '../components/assets/course/repair.jpg';
+import GraphicsDesignBg from '../components/assets/course/graphic.jpg';
+import TypingBg from '../components/assets/course/typing.jpeg';
+import InternetBg from '../components/assets/course/office.webp';
+import OfficePackageBg from '../components/assets/course/office.webp';
+import StudentPackageBg from '../components/assets/course/office.webp';
 
 // Modern color palette
 const theme = {
@@ -37,16 +46,6 @@ const fadeInUp = keyframes`
   }
 `;
 
-const float = keyframes`
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-`;
-
-const glow = keyframes`
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
-  50% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.4); }
-`;
-
 const CoursesWrapper = styled.section`
   padding: 8rem 0;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -68,7 +67,7 @@ const CoursesWrapper = styled.section`
   }
   
   @media (max-width: 768px) {
-    padding: 4rem 0;
+    padding: 7rem 0;
   }
 `;
 
@@ -168,46 +167,38 @@ const CourseCard = styled.div`
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: ${props => props.gradient || theme.colors.gradient.primary};
-    z-index: 1;
+    
+    .course-image::after {
+      opacity: 0.7;
+    }
   }
 `;
 
 const CourseImage = styled.div`
-  height: 180px;
-  background: ${props => props.gradient || theme.colors.gradient.primary};
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
   position: relative;
   overflow: hidden;
+  background: ${props => props.gradient || theme.colors.gradient.primary};
 
-  &::before {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    background: ${props => props.gradient || theme.colors.gradient.primary};
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    mix-blend-mode: multiply;
   }
-`;
-
-const CourseIcon = styled.div`
-  font-size: 4rem;
-  position: relative;
-  z-index: 2;
-  animation: ${float} 3s ease-in-out infinite;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
 `;
 
 const CourseContent = styled.div`
@@ -340,7 +331,7 @@ const coursesData = [
     duration: "3 Months",
     schedule: "Morning/Evening",
     price: "NPR 3,500",
-    icon: "💻",
+    image: BasicComputerBg,
     gradient: theme.colors.gradient.primary
   },
   {
@@ -350,7 +341,7 @@ const coursesData = [
     duration: "1.5 Months",
     schedule: "Weekends",
     price: "NPR 2,500",
-    icon: "🔧",
+    image: RepairingBg,
     gradient: theme.colors.gradient.secondary
   },
   {
@@ -360,7 +351,7 @@ const coursesData = [
     duration: "2 Months",
     schedule: "Flexible",
     price: "NPR 6,000",
-    icon: "🎨",
+    image: GraphicsDesignBg,
     gradient: theme.colors.gradient.accent
   },
   {
@@ -370,7 +361,7 @@ const coursesData = [
     duration: "1 Month",
     schedule: "Morning/Evening",
     price: "NPR 2,000",
-    icon: "⌨️",
+    image: TypingBg,
     gradient: theme.colors.gradient.primary
   },
   {
@@ -380,7 +371,7 @@ const coursesData = [
     duration: "1 Month",
     schedule: "Flexible",
     price: "NPR 1,500",
-    icon: "🌐",
+    image: InternetBg,
     gradient: theme.colors.gradient.secondary
   },
   {
@@ -390,7 +381,7 @@ const coursesData = [
     duration: "2 Months",
     schedule: "Flexible",
     price: "NPR 4,000",
-    icon: "📊",
+    image: OfficePackageBg,
     gradient: theme.colors.gradient.accent
   },
   {
@@ -400,7 +391,7 @@ const coursesData = [
     duration: "3 Months",
     schedule: "After school",
     price: "NPR 3,000",
-    icon: "🎓",
+    image: StudentPackageBg,
     gradient: theme.colors.gradient.primary
   }
 ];
@@ -437,9 +428,9 @@ export const CoursesPage = () => {
         <CoursesGrid>
           {filteredCourses.length > 0 ? (
             filteredCourses.map((course, index) => (
-              <CourseCard key={course.id} index={index} gradient={course.gradient}>
-                <CourseImage gradient={course.gradient}>
-                  <CourseIcon>{course.icon}</CourseIcon>
+              <CourseCard key={course.id} index={index}>
+                <CourseImage gradient={course.gradient} className="course-image">
+                  <img src={course.image} alt={course.title} />
                 </CourseImage>
                 <CourseContent>
                   <CourseTitle>{course.title}</CourseTitle>

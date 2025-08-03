@@ -3,14 +3,12 @@ import styled from 'styled-components';
 import { FiZoomIn, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Import all images from assets folder
-import image1 from 'assets/WhatsApp Image 2025-08-02 at 9.29.57 PM.jpeg';
-import image2 from 'assets/WhatsApp Image 2025-08-02 at 9.30.00 PM.jpeg';
-import image3 from 'assets/WhatsApp Image 2025-08-02 at 9.30.03 PM.jpeg';
-import image4 from 'assets/WhatsApp Image 2025-08-02 at 9.30.05 PM.jpeg';
-import image5 from 'assets/WhatsApp Image 2025-08-02 at 9.31.06 PM.jpeg';
-import image6 from 'assets/WhatsApp Image 2025-08-02 at 9.31.06 PM(1).jpeg';
-import image7 from 'assets/WhatsApp Image 2025-08-02 at 9.32.57 PM.jpeg';
-
+import image1 from '../components/assets/WhatsApp Image 2025-08-02 at 9.29.57 PM.jpeg';
+import image2 from '../components/assets/WhatsApp Image 2025-08-02 at 9.30.00 PM.jpeg';
+import image3 from '../components/assets/WhatsApp Image 2025-08-02 at 9.30.03 PM.jpeg';
+import image4 from '../components/assets/WhatsApp Image 2025-08-02 at 9.31.06 PM(1).jpeg';
+import image5 from '../components/assets/WhatsApp Image 2025-08-02 at 9.31.06 PM.jpeg';
+import image6 from '../components/assets/WhatsApp Image 2025-08-02 at 9.32.57 PM.jpeg';
 // Gallery images with descriptive alt text and categories
 const galleryImages = [
   { id: 1, src: image1, alt: 'Students Receving completion certificate', category: 'classroom' },
@@ -19,7 +17,6 @@ const galleryImages = [
   { id: 4, src: image4, alt: 'Instructor demonstrating coding techniques', category: 'classroom' },
   { id: 5, src: image5, alt: 'Students engaged in hands-on exercise', category: 'lab' },
   { id: 6, src: image6, alt: 'Annual technology conference at institute', category: 'events' },
-  { id: 7, src: image7, alt: 'Registration Certificate', category: 'events', featured: true },
 ];
 
 const GalleryPage = () => {

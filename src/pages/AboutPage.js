@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { Container } from '../components/Container';
 import { FaUsers, FaLightbulb, FaChartLine, FaHandsHelping } from 'react-icons/fa';
 import { BiBookAlt, BiMedal, BiGlobe } from 'react-icons/bi';
+import GoogleMapEmbed from '../components/maps';
 
 // Reuse the same animations from contact page
 const fadeInUp = keyframes`

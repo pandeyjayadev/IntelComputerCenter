@@ -14,6 +14,7 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { Testimonials } from './components/testimonial';
 import { FAQPage } from './pages/FaqPage';
 import GalleryPage from './pages/GalleryPage';
+import GoogleMapEmbed, { MapContainer } from './components/maps/index';
 import { EnrollPage } from './pages/EnroolPage';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
 
@@ -31,6 +32,8 @@ function App() {
                 <Hero />
                 <FeaturedCourses />
                 <Stats />
+                <GalleryPage />
+                <GoogleMapEmbed />
                 <Testimonials />
               </>
             } 
