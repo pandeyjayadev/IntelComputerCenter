@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
-  background-color: #f0f0f0;
-  max-width: 1400px;
-  margin: 60px auto;
-  padding: 3rem;
-`;
-
 
 const MapContainer = styled.div`
     height: 100vh;
+    background: #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -46,30 +41,10 @@ const MapContainer = styled.div`
         }
     }
 `;
-const Header = styled.header`
-  text-align: center;
-
-  h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0rem;
-    background: linear-gradient(90deg, #4361ee, #3a0ca3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  p {
-    color: #666;
-    font-size: 1.2rem;
-  }
-`;
 
 const GoogleMapEmbed = () => {
   return (
-    <Container>
-      <Header> 
-        <h1>Intel Computer Center Location</h1>
-        <p>Find us here</p>
-      </Header>
+  
       <MapContainer>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.0127602538205!2d81.3419519760125!3d28.20692490327969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39988f006b1a1371%3A0x78d57bbf33ce01b0!2sIntel%20Computer%20Center!5e0!3m2!1sen!2snp!4v1754202501903!5m2!1sen!2snp"
@@ -86,7 +61,6 @@ const GoogleMapEmbed = () => {
         title="Intel Computer Center Location"
       />
     </MapContainer>
-    </Container>
 
   );
 };
