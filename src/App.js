@@ -17,12 +17,14 @@ import GalleryPage from './pages/GalleryPage';
 import GoogleMapEmbed, { MapContainer } from './components/maps/index';
 import { EnrollPage } from './pages/EnroolPage';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route 

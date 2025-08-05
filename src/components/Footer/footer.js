@@ -475,7 +475,7 @@ export const Footer = () => {
           </SocialIcons>
         </FooterSection>
 
-        <NewsletterSection>
+        {/* <NewsletterSection>
           <FooterHeading>Newsletter</FooterHeading>
           <p style={{ color: '#ccc', marginBottom: '1rem', fontSize: '0.9rem' }}>
             Subscribe to get the latest updates and course announcements.
@@ -491,11 +491,10 @@ export const Footer = () => {
               Subscribe Now
             </NewsletterButton>
           </NewsletterForm>
-        </NewsletterSection>
+        </NewsletterSection> */}
       </FooterContent>
 
       <Copyright>
-        <p>© 2024 Intel Computer Institute. All Rights Reserved.</p>
         <p>
           Developed by <DeveloperCredit href="https://pandeyj.com.np" target="_blank" rel="noopener noreferrer">Jayadev Pandey</DeveloperCredit>
         </p>

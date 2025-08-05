@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 
 // Import local course images
-import BasicComputerCourseImg from '../assets/course/office.webp';
-import ComputerRepairingImg from '../assets/course/repair.jpg';
-import GraphicsDesignImg from '../assets/course/graphic.jpg';
+import BasicComputerBg from '../assets/basic computer.jpeg';
+import RepairingBg from '../assets/course/repair.jpg';
+import GraphicsDesignBg from '../assets/course/graphic.jpg';
+
 
 // Modern color palette
 const theme = {
@@ -256,35 +257,32 @@ const featuredCourses = [
   {
     id: 1,
     title: "Basic Computer Course",
-    description: "Master computer fundamentals including MS Office, file management, typing, internet basics, email, and essential digital skills for the modern workplace.",
+    description: "Fundamentals of computer, Multimedia, Disk Management, MS Word, MS Excel, MS PowerPoint, File management, Typing (Nepali & English), Internet, Email, Printing, Scanning.",
     duration: "3 Months",
     schedule: "Morning/Evening",
-    price: "NPR 3,500",
-    image: BasicComputerCourseImg,
-    gradient: theme.colors.gradient.primary,
-    level: "Beginner"
+    price: "NPR 3,000",
+    image: BasicComputerBg,
+    gradient: theme.colors.gradient.primary
   },
   {
     id: 2,
     title: "Computer Repairing",
-    description: "Learn hardware fundamentals, component assembly, Windows installation, and essential troubleshooting techniques for computer maintenance.",
+    description: "Introduction to computer parts, assembling/disassembling, formatting, installing Windows, basic troubleshooting.",
     duration: "1.5 Months",
     schedule: "Weekends",
     price: "NPR 2,500",
-    image: ComputerRepairingImg,
-    gradient: theme.colors.gradient.secondary,
-    level: "Intermediate"
+    image: RepairingBg,
+    gradient: theme.colors.gradient.secondary
   },
   {
     id: 3,
     title: "Graphics Design (Basic)",
-    description: "Create stunning visuals with Adobe Photoshop and Canva. Learn photo editing, design principles, and professional graphics creation.",
+    description: "Adobe Photoshop (basic), Canva, Photo editing, ID/Passport photo making.",
     duration: "2 Months",
     schedule: "Flexible",
     price: "NPR 6,000",
-    image: GraphicsDesignImg,
-    gradient: theme.colors.gradient.accent,
-    level: "Creative"
+    image: GraphicsDesignBg,
+    gradient: theme.colors.gradient.accent
   },
 ];
 

@@ -5,13 +5,13 @@ import { FiSearch, FiClock, FiCalendar, FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 // Import local images for course backgrounds
-import BasicComputerBg from '../components/assets/course/repair.jpg';
+import BasicComputerBg from '../components/assets/basic computer.jpeg';
 import RepairingBg from '../components/assets/course/repair.jpg';
 import GraphicsDesignBg from '../components/assets/course/graphic.jpg';
-import TypingBg from '../components/assets/course/typing.jpeg';
-import InternetBg from '../components/assets/course/office.webp';
+import TypingBg from '../components/assets/colored-keys.jpg';
+import InternetBg from '../components/assets/course/iot-7850194_1280.jpg';
 import OfficePackageBg from '../components/assets/course/office.webp';
-import StudentPackageBg from '../components/assets/course/office.webp';
+import StudentPackageBg from '../components/assets/IMG_1782.jpg';
 
 // Modern color palette
 const theme = {
@@ -330,7 +330,7 @@ const coursesData = [
     description: "Fundamentals of computer, Multimedia, Disk Management, MS Word, MS Excel, MS PowerPoint, File management, Typing (Nepali & English), Internet, Email, Printing, Scanning.",
     duration: "3 Months",
     schedule: "Morning/Evening",
-    price: "NPR 3,500",
+    price: "NPR 3,000",
     image: BasicComputerBg,
     gradient: theme.colors.gradient.primary
   },

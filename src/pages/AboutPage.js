@@ -1,12 +1,10 @@
-
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Container } from '../components/Container';
-import { FaUsers, FaLightbulb, FaChartLine, FaHandsHelping } from 'react-icons/fa';
-import { BiBookAlt, BiMedal, BiGlobe } from 'react-icons/bi';
-import GoogleMapEmbed from '../components/maps';
+import { FaUsers, FaLightbulb, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { BiMedal, BiGlobe } from 'react-icons/bi';
 
-// Reuse the same animations from contact page
+// Animations
 const fadeInUp = keyframes`
   from { 
     opacity: 0; 
@@ -31,7 +29,7 @@ const gradientShift = keyframes`
   100% { background-position: 0% 50%; }
 `;
 
-// Reuse the same wrapper styles with slight modifications
+// Styled Components
 const AboutWrapper = styled.section`
   padding: 6rem 0;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #1a1a2e 75%, #0f0f23 100%);
@@ -63,7 +61,6 @@ const AboutWrapper = styled.section`
   }
 `;
 
-// Reuse FloatingElements component as is
 const FloatingElements = styled.div`
   position: absolute;
   width: 100%;
@@ -100,7 +97,6 @@ const FloatingElements = styled.div`
   }
 `;
 
-// Reuse SectionHeader components
 const SectionHeader = styled.div`
   text-align: center;
   max-width: 900px;
@@ -147,7 +143,6 @@ const SectionSubtitle = styled.p`
   opacity: 0.9;
 `;
 
-// New components for About page
 const AboutContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -155,7 +150,7 @@ const AboutContent = styled.div`
   position: relative;
   z-index: 2;
   max-width: 1400px;
-  margin: 0 auto;
+  margin:  auto;
 
   @media (max-width: 968px) {
     grid-template-columns: 1fr;
@@ -255,6 +250,133 @@ const ValueDescription = styled.p`
   opacity: 0.8;
 `;
 
+const OwnersSection = styled.div`
+  margin: 4rem;
+  position: relative;
+  z-index: 2;
+  animation: ${fadeInUp} 1s ease forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+`;
+
+const OwnersTitle = styled.h3`
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #7877c6, #ff77c6);
+    border-radius: 2px;
+  }
+`;
+
+const OwnerCard = styled.div`
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const OwnerPhoto = styled.div`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(120, 119, 198, 0.3);
+  margin-right: 2rem;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+`;
+
+const OwnerInfo = styled.div`
+  flex: 1;
+`;
+
+const OwnerName = styled.h4`
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, #7877c6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+`;
+
+const OwnerPosition = styled.p`
+  font-size: 1rem;
+  color: #ff77c6;
+  margin-bottom: 1rem;
+  font-weight: 500;
+`;
+
+const OwnerBio = styled.p`
+  font-size: 1rem;
+  color: #e6e6e6;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+`;
+
+const ContactInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+`;
+
+const ContactItem = styled.a`
+  display: flex;
+  align-items: center;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #7877c6;
+  }
+
+  svg {
+    margin-right: 8px;
+    font-size: 1.1rem;
+  }
+`;
+
 export const AboutPage = () => {
   const values = [
     {
@@ -279,6 +401,14 @@ export const AboutPage = () => {
     }
   ];
 
+  const owner = {
+    name: "Jira B.K.",
+    position: "Founder & Director",
+    bio: "With many years of experience in computer education and IT training, we founded Intel Computer Institute with a vision to bring world-class technical education to Bardiya",
+    email: "intel2070@gmail.com",
+    phone: "+977 9812494560"
+  };
+
   return (
     <AboutWrapper id="about">
       <FloatingElements />
@@ -286,11 +416,32 @@ export const AboutPage = () => {
         <SectionHeader>
           <SectionTitle>About Our Institute</SectionTitle>
           <SectionSubtitle>
-            Pioneering computer education in Bardiya since 2010, we've empowered thousands
+            Pioneering computer education in Bardiya since 2074 B.S, we've empowered thousands
             of students with practical, career-focused technology skills.
           </SectionSubtitle>
         </SectionHeader>
 
+        <OwnersSection>
+          <OwnerCard>
+            <OwnerPhoto>
+              <img src={require('../components/assets/WhatsApp Image 2025-08-05 at 10.52.18 AM.jpeg')} alt={owner.name} />
+            </OwnerPhoto>
+            <OwnerInfo>
+              <OwnerName>{owner.name}</OwnerName>
+              <OwnerPosition>{owner.position}</OwnerPosition>
+              <OwnerBio>{owner.bio}</OwnerBio>
+              <ContactInfo>
+                <ContactItem href={`mailto:${owner.email}`}>
+                  <FaEnvelope /> {owner.email}
+                </ContactItem>
+                <ContactItem href={`tel:${owner.phone.replace(/\s/g, '')}`}>
+                  <FaPhone /> {owner.phone}
+                </ContactItem>
+              </ContactInfo>
+            </OwnerInfo>
+          </OwnerCard>
+        </OwnersSection>
+        
         <AboutContent>
           <MissionStatement>
             <MissionCard>
@@ -310,14 +461,13 @@ export const AboutPage = () => {
                 Our History
               </h3>
               <p style={{ color: '#e6e6e6', lineHeight: '1.8', opacity: 0.9 }}>
-                Founded in 2010 with just 12 students, Intel Computer Institute has grown to
+                Founded in 2074 B.S with just 12 students, Intel Computer Institute has grown to
                 become Bardiya's premier computer training center. Our alumni network now spans
                 across Nepal and internationally, with graduates working in software development,
                 IT services, digital marketing, and more.
               </p>
             </MissionCard>
           </MissionStatement>
-
           <ValuesGrid>
             {values.map((value, index) => (
               <ValueCard key={index}>

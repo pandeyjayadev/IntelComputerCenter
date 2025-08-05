@@ -4,19 +4,26 @@ import { FiZoomIn, FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Import all images from assets folder
 import image1 from '../components/assets/WhatsApp Image 2025-08-02 at 9.29.57 PM.jpeg';
-import image2 from '../components/assets/WhatsApp Image 2025-08-02 at 9.30.00 PM.jpeg';
+import image2 from '../components/assets/ChatGPT Image Aug 3, 2025, 04_30_16 PM.png';
 import image3 from '../components/assets/WhatsApp Image 2025-08-02 at 9.30.03 PM.jpeg';
 import image4 from '../components/assets/WhatsApp Image 2025-08-02 at 9.31.06 PM(1).jpeg';
 import image5 from '../components/assets/WhatsApp Image 2025-08-02 at 9.31.06 PM.jpeg';
-import image6 from '../components/assets/WhatsApp Image 2025-08-02 at 9.32.57 PM.jpeg';
+import image6 from '../components/assets/IMG_1779.jpg';
+import image7 from '../components/assets/IMG_1788.jpg';
+import image8 from '../components/assets/WhatsApp Image 2025-08-05 at 10.52.18 AM.jpeg';
+import image9 from '../components/assets/hero-background.jpeg';
 // Gallery images with descriptive alt text and categories
 const galleryImages = [
   { id: 1, src: image1, alt: 'Students Receving completion certificate', category: 'classroom' },
-  { id: 2, src: image2, alt: 'Computer Insttitute location', category: 'lab' },
+  { id: 2, src: image2, alt: 'Computer Insttitute Logo', category: 'lab' },
   { id: 3, src: image3, alt: 'Students Receving completion certificate', category: 'classroom', featured: true },
   { id: 4, src: image4, alt: 'Instructor demonstrating coding techniques', category: 'classroom' },
   { id: 5, src: image5, alt: 'Students engaged in hands-on exercise', category: 'lab' },
-  { id: 6, src: image6, alt: 'Annual technology conference at institute', category: 'events' },
+  { id: 6, src: image6, alt: 'students learning', category: 'classroom' },
+  { id: 7, src: image7, alt: 'students learning', category: 'classroom' },
+  { id: 8, src: image8, alt: 'Director of our institute', category: 'classroom' },
+  { id: 9, src: image9, alt: 'students learning', category: 'classroom' },
+
 ];
 
 const GalleryPage = () => {
