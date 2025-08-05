@@ -10,7 +10,6 @@ import image4 from '../components/assets/WhatsApp Image 2025-08-02 at 9.31.06 PM
 import image5 from '../components/assets/WhatsApp Image 2025-08-02 at 9.31.06 PM.jpeg';
 import image6 from '../components/assets/IMG_1779.jpg';
 import image7 from '../components/assets/IMG_1788.jpg';
-import image8 from '../components/assets/WhatsApp Image 2025-08-05 at 10.52.18 AM.jpeg';
 import image9 from '../components/assets/hero-background.jpeg';
 // Gallery images with descriptive alt text and categories
 const galleryImages = [
@@ -21,8 +20,7 @@ const galleryImages = [
   { id: 5, src: image5, alt: 'Students engaged in hands-on exercise', category: 'lab' },
   { id: 6, src: image6, alt: 'students learning', category: 'classroom' },
   { id: 7, src: image7, alt: 'students learning', category: 'classroom' },
-  { id: 8, src: image8, alt: 'Director of our institute', category: 'classroom' },
-  { id: 9, src: image9, alt: 'students learning', category: 'classroom' },
+  { id: 8, src: image9, alt: 'students learning', category: 'classroom' },
 
 ];
 
