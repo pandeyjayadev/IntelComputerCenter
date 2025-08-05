@@ -2,42 +2,111 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/loog.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/loog.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#0066cc" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Intel Computer Center - Professional Computer Training Institute in Nepal</title>
+    <meta name="title" content="Intel Computer Center - Professional Computer Training Institute in Nepal" />
+    <meta name="description" content="Join Intel Computer Center for expert computer training courses in Nepal. Learn programming, graphic design, office automation, hardware repair, and more. Industry-experienced instructors with 100% job placement assistance." />
+    <meta name="keywords" content="computer training, programming courses, graphic design, office automation, hardware repair, computer institute Nepal, IT training, web development, digital marketing, typing course" />
+    <meta name="author" content="Intel Computer Center" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://intelcomputercenter.com/" />
+    <meta property="og:title" content="Intel Computer Center - Professional Computer Training Institute" />
+    <meta property="og:description" content="Expert computer training courses in Nepal. Learn programming, graphic design, office automation, hardware repair with 100% job placement assistance." />
+    <meta property="og:image" content="%PUBLIC_URL%/loog.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://intelcomputercenter.com/" />
+    <meta property="twitter:title" content="Intel Computer Center - Professional Computer Training Institute" />
+    <meta property="twitter:description" content="Expert computer training courses in Nepal. Learn programming, graphic design, office automation, hardware repair with 100% job placement assistance." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/loog.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://intelcomputercenter.com/" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Intel Computer Center",
+      "image": "https://intelcomputercenter.com/loog.png",
+      "description": "Professional computer training institute offering courses in programming, graphic design, office automation, and hardware repair in Nepal.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Putalisadak",
+        "addressLocality": "Kathmandu",
+        "addressRegion": "Bagmati",
+        "postalCode": "44600",
+        "addressCountry": "NP"
+      },
+      "telephone": "+977-9841234567",
+      "email": "info@intelcomputercenter.com",
+      "url": "https://intelcomputercenter.com",
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:00",
+        "closes": "18:00"
+      }],
+      "sameAs": [
+        "https://www.facebook.com/intelcomputercenter",
+        "https://www.instagram.com/intelcomputercenter",
+        "https://www.linkedin.com/company/intelcomputercenter"
+      ]
+    }
+    </script>
+    
+    <!-- Google Analytics (Replace with actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Progressive Web App -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Microsoft Clarity (Optional) -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <h2>JavaScript Required</h2>
+        <p>Intel Computer Center website requires JavaScript to function properly. Please enable JavaScript in your browser settings to continue.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

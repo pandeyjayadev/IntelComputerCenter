@@ -16,7 +16,7 @@ const galleryImages = [
   { id: 1, src: image1, alt: 'Students Receving completion certificate', category: 'classroom' },
   { id: 2, src: image2, alt: 'Computer Insttitute Logo', category: 'lab' },
   { id: 3, src: image3, alt: 'Students Receving completion certificate', category: 'classroom', featured: true },
-  { id: 4, src: image4, alt: 'Instructor demonstrating coding techniques', category: 'classroom' },
+  { id: 4, src: image4, alt: 'Student Receving completion certificate', category: 'classroom' },
   { id: 5, src: image5, alt: 'Students engaged in hands-on exercise', category: 'lab' },
   { id: 6, src: image6, alt: 'students learning', category: 'classroom' },
   { id: 7, src: image7, alt: 'students learning', category: 'classroom' },
