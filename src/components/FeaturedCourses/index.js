@@ -323,7 +323,7 @@ export const FeaturedCourses = () => {
                 </CourseMeta>
                 <CourseFooter>
                   <CoursePrice>{course.price}</CoursePrice>
-                  <Button as={Link} to={`/enroll/${course.id}`}>
+                  <Button secondary as={Link} to="/enroll">
                     Enroll Now 
                   </Button>
                 </CourseFooter>

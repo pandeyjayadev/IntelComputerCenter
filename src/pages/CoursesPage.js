@@ -12,6 +12,7 @@ import TypingBg from '../components/assets/colored-keys.jpg';
 import InternetBg from '../components/assets/course/iot-7850194_1280.jpg';
 import OfficePackageBg from '../components/assets/course/office.webp';
 import StudentPackageBg from '../components/assets/IMG_1782.jpg';
+import { useNavigate } from 'react-router-dom';
 
 // Modern color palette
 const theme = {
@@ -404,6 +405,11 @@ export const CoursesPage = () => {
     course.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+
+  // Use useNavigate for programmatic navigation
+
+  const navigate = useNavigate();
+
   return (
     <CoursesWrapper id="courses">
       <Container>
@@ -447,7 +453,11 @@ export const CoursesPage = () => {
                   </CourseMeta>
                   <CourseFooter>
                     <CoursePrice>{course.price}</CoursePrice>
-                    <EnrollButton to={`/enroll/${course.id}`}>
+                    <EnrollButton
+                      as="button"
+                      type="button"
+                      onClick={() => navigate('/enroll')}
+                    >
                       Enroll Now
                       <FiArrowRight size={16} />
                     </EnrollButton>
