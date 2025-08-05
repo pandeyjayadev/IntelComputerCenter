@@ -350,7 +350,7 @@ const coursesData = [
     description: "Adobe Photoshop (basic), Canva, Photo editing, ID/Passport photo making.",
     duration: "2 Months",
     schedule: "Flexible",
-    price: "NPR 6,000",
+    price: "NPR 3,000",
     image: GraphicsDesignBg,
     gradient: theme.colors.gradient.accent
   },
