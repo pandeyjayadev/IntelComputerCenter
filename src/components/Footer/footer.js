@@ -318,11 +318,6 @@ const DeveloperCredit = styled.a`
 `;
 
 export const Footer = () => {
-  const handleNewsletterSubmit = (e) => {
-    e.preventDefault();
-    // Handle newsletter subscription
-  };
-
   return (
     <FooterWrapper>
       <FloatingElements />
@@ -387,24 +382,6 @@ export const Footer = () => {
             </SocialIcon>
           </SocialIcons>
         </FooterSection>
-
-        {/* <NewsletterSection>
-          <FooterHeading>Newsletter</FooterHeading>
-          <p style={{ color: '#ccc', marginBottom: '1rem', fontSize: '0.9rem' }}>
-            Subscribe to get the latest updates and course announcements.
-          </p>
-          <NewsletterForm onSubmit={handleNewsletterSubmit}>
-            <NewsletterInput 
-              type="email" 
-              placeholder="Enter your email address"
-              required
-            />
-            <NewsletterButton type="submit">
-              <FaPaperPlane />
-              Subscribe Now
-            </NewsletterButton>
-          </NewsletterForm>
-        </NewsletterSection> */}
       </FooterContent>
 
       <Copyright>
