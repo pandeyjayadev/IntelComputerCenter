@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Container } from '../Container';
-import { FiClock, FiCalendar, FiStar, FiArrowRight } from 'react-icons/fi';
+import { FiClock, FiCalendar, FiStar, } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 

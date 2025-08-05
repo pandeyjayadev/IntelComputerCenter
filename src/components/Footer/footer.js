@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, FaPaperPlane } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const float = keyframes`
@@ -7,10 +7,6 @@ const float = keyframes`
   50% { transform: translateY(-8px); }
 `;
 
-const shimmer = keyframes`
-  0% { background-position: -200px 0; }
-  100% { background-position: calc(200px + 100%) 0; }
-`;
 
 const pulse = keyframes`
   0%, 100% { opacity: 1; }
@@ -272,85 +268,6 @@ const SocialIcon = styled.a`
   }
 `;
 
-const NewsletterForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
-`;
-
-const NewsletterInput = styled.input`
-  padding: 1rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-  outline: none;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  
-  &::placeholder {
-    color: #aaa;
-  }
-  
-  &:focus {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #7877c6;
-    box-shadow: 0 0 0 3px rgba(120, 119, 198, 0.1);
-  }
-`;
-
-const NewsletterButton = styled.button`
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #7877c6 0%, #ff77c6 100%);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-  }
-  
-  &:hover {
-    background: linear-gradient(135deg, #9694d4 0%, #ff95d4 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(120, 119, 198, 0.4);
-  }
-  
-  &:hover::before {
-    left: 100%;
-  }
-  
-  &:active {
-    transform: translateY(0);
-  }
-  
-  svg {
-    transition: transform 0.3s ease;
-  }
-  
-  &:hover svg {
-    transform: translateX(2px);
-  }
-`;
 
 const Copyright = styled.div`
   text-align: center;
@@ -398,10 +315,6 @@ const DeveloperCredit = styled.a`
   &:hover::after {
     width: 100%;
   }
-`;
-
-const NewsletterSection = styled(FooterSection)`
-  background: linear-gradient(135deg, rgba(120, 119, 198, 0.05), rgba(255, 119, 198, 0.05));
 `;
 
 export const Footer = () => {

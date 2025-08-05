@@ -259,25 +259,6 @@ const OwnersSection = styled.div`
   opacity: 0;
 `;
 
-const OwnersTitle = styled.h3`
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #fff;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, #7877c6, #ff77c6);
-    border-radius: 2px;
-  }
-`;
 
 const OwnerCard = styled.div`
   display: flex;
