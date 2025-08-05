@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaTimes, FaHome, FaBook, FaChalkboardTeacher, FaEnvelope, FaQuestionCircle, FaUserGraduate } from 'react-icons/fa';
-import { MdComputer } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 // Theme colors

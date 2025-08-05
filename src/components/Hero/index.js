@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Container } from '../Container';
 import { Link } from 'react-router-dom';
-import { FaPlay, FaRocket, FaGraduationCap, FaLaptopCode, FaBrain, FaCertificate } from 'react-icons/fa';
+import { FaPlay, FaGraduationCap, FaLaptopCode, FaBrain } from 'react-icons/fa';
 import heroBackground from '../assets/hero-background.jpeg';
 
 // Theme colors
@@ -74,31 +74,6 @@ const HeroContent = styled.div`
   
   @media (max-width: 480px) {
     padding: 0.5rem;
-  }
-`;
-
-const Badge = styled.div`
-  display: inline-flex;
-  align-items: center;
-  background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  padding: 0.5rem 1.25rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-  @media (max-width: 768px) {
-    padding: 0.4rem 1rem;
-    font-size: 0.8rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  svg {
-    margin-right: 0.5rem;
-    color: ${theme.colors.accent};
   }
 `;
 

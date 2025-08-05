@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Container } from '../components/Container';
 import { FaUser, FaCalendarAlt, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap, FaClock } from 'react-icons/fa';
 import { IoMdSend } from 'react-icons/io';
